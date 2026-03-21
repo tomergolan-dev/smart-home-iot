@@ -73,7 +73,7 @@ There are **two ways to run the system**.
 ## Option 1 – Run everything automatically
 
 ```bash
-run_all.bat
+./run_all.bat
 ```
 
 This starts all system components in separate terminals.

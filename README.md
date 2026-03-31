@@ -49,31 +49,37 @@ Manager → SQLite Database
 
 ---
 
-# Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/smart-home-iot.git
-cd smart-home-iot
-```
+## Installation
 
 Install dependencies:
 
+#### Windows
 ```bash
 python -m pip install -r requirements.txt
 ```
 
+#### macOS
+```bash
+python3 -m pip install -r requirements.txt
+```
+
 ---
 
-# Running the System
+## Option 1 - Run everything automatically
 
-There are **two ways to run the system**.
-
-## Option 1 – Run everything automatically
-
+#### Windows
 ```bash
 ./run_all.bat
+```
+
+#### macOS
+Run once to give execute permission:
+```bash
+chmod +x run_all.sh
+```
+Run the system:
+```bash
+./run_all.sh
 ```
 
 This starts all system components in separate terminals.
@@ -84,36 +90,40 @@ This starts all system components in separate terminals.
 
 Open separate terminals and run:
 
-### Temperature Sensor
+### Windows
+
+#### Temperature Sensor
 
 ```bash
-python sensors/temperature_sensor.py
+python emulators/temperature_sensor.py
 ```
 
-### Button Emulator
+#### Button Emulator
 
 ```bash
 python emulators/button_emulator.py
 ```
 
-### AC Relay
+#### AC Relay
 
 ```bash
-python actuators/ac_relay.py
+python emulators/ac_relay.py
 ```
 
-### System Manager
+#### System Manager
 
 ```bash
 python manager/manager.py
 ```
 
-### GUI
+#### GUI
 
 ```bash
 python gui/gui.py
 ```
+### macOS
 
+> ⚠️ Note: On macOS and Linux, use `python3` instead of `python` when running commands.
 ---
 
 # MQTT Topics
